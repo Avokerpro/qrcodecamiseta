@@ -1,16 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avoker Conecta - Redirecionando...</title>
     <script>
-        // MUDAR O LINK ABAIXO SEMPRE QUE QUISER
-        const DESTINO = "[https://www.avoker.com.br]"; 
+        /**
+         * REDIRECIONADOR DINÂMICO AVOKER CONECTA
+         * Este é o link para onde o QR Code da sua camiseta vai levar.
+         * Quando quiser mudar o destino, basta editar a URL abaixo no GitHub.
+         */
+        const DESTINO_FINAL = "https://www.avoker.com.br"; 
 
-        window.location.href = DESTINO;
+        // Executa o redirecionamento automático
+        window.location.href = DESTINO_FINAL;
     </script>
+    <style>
+        /* Estilização Premium para a tela de transição */
+        body { 
+            background: #000; 
+            color: #fff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+        }
+        .loader { 
+            width: 48px; 
+            height: 48px; 
+            border: 5px solid #1e3a8a; 
+            border-top: 5px solid #fff; 
+            border-radius: 50%; 
+            margin: 0 auto 24px;
+            animation: spin 1s linear infinite; 
+        }
+        .text {
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 0.4em;
+            font-weight: 900;
+            opacity: 0.8;
+            color: #3b82f6;
+        }
+        @keyframes spin { 
+            0% { transform: rotate(0deg); } 
+            100% { transform: rotate(360deg); } 
+        }
+    </style>
 </head>
-<body style="background:#000; color:#fff; display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif;">
-    <p>Conectando ao universo Avoker...</p>
+<body>
+    <div class="container">
+        <div class="loader"></div>
+        <p class="text">Conectando ao universo <strong>Avoker</strong></p>
+    </div>
 </body>
 </html>
